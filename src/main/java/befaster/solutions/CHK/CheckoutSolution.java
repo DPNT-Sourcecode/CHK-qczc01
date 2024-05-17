@@ -11,6 +11,26 @@ public class CheckoutSolution {
         Integer D = 0;
         Integer E = 0;
         Integer F = 0;
+        Integer G = 0;
+        Integer H = 0;
+        Integer I = 0;
+        Integer J = 0;
+        Integer K = 0;
+        Integer L = 0;
+        Integer M = 0;
+        Integer N = 0;
+        Integer O = 0;
+        Integer P = 0;
+        Integer Q = 0;
+        Integer R = 0;
+        Integer S = 0;
+        Integer T = 0;
+        Integer U = 0;
+        Integer V = 0;
+        Integer W = 0;
+        Integer X = 0;
+        Integer Y = 0;
+        Integer Z = 0;
 
         for(int i = 0; i < skus.length(); i++) {
             if(skus.charAt(i) == 'A') {A++;}
@@ -19,6 +39,26 @@ public class CheckoutSolution {
             else if(skus.charAt(i) == 'D') {D++;}
             else if(skus.charAt(i) == 'E') {E++;}
             else if(skus.charAt(i) == 'F') {F++;}
+            else if(skus.charAt(i) == 'G') {G++;}
+            else if(skus.charAt(i) == 'H') {H++;}
+            else if(skus.charAt(i) == 'I') {I++;}
+            else if(skus.charAt(i) == 'J') {J++;}
+            else if(skus.charAt(i) == 'K') {K++;}
+            else if(skus.charAt(i) == 'L') {L++;}
+            else if(skus.charAt(i) == 'M') {M++;}
+            else if(skus.charAt(i) == 'N') {N++;}
+            else if(skus.charAt(i) == 'O') {O++;}
+            else if(skus.charAt(i) == 'P') {P++;}
+            else if(skus.charAt(i) == 'Q') {Q++;}
+            else if(skus.charAt(i) == 'R') {R++;}
+            else if(skus.charAt(i) == 'S') {S++;}
+            else if(skus.charAt(i) == 'T') {T++;}
+            else if(skus.charAt(i) == 'U') {U++;}
+            else if(skus.charAt(i) == 'V') {V++;}
+            else if(skus.charAt(i) == 'W') {W++;}
+            else if(skus.charAt(i) == 'X') {X++;}
+            else if(skus.charAt(i) == 'Y') {Y++;}
+            else if(skus.charAt(i) == 'Z') {Z++;}
             else return -1;
         }
 
@@ -29,7 +69,6 @@ public class CheckoutSolution {
         result = result + A * 50;
 
         result = result + E * 40;
-
         B = B - E/2;
 
         if(B>0) {
@@ -48,6 +87,71 @@ public class CheckoutSolution {
         F = F/3;
         result = result + F*2 * 10;
 
+        result = result + G * 20;
+
+        result = result + H/10 * 80;
+        H = H % 10;
+        result = result + H/5 * 45;
+        H = H % 5;
+        result = result + H * 10;
+
+        result = result + I * 35;
+
+        result = result + J * 60;
+
+        result = result + K/2 * 150;
+        K = K%2;
+        result = result + K * 80;
+
+        result = result + L * 90;
+
+        result = result + N * 40;
+        M = M - N/3;
+
+        if(M>0) {
+            result = result + M * 15;
+        }
+
+        result = result + O * 10;
+
+        result = result + P/5 * 200;
+        P = P%5;
+        result = result + P * 50;
+
+        result = result + R * 50;
+        Q = Q - R/3;
+
+        if(Q>0) {
+            result = result + Q/3 * 80;
+            Q = Q % 3;
+            result = result + Q * 30;
+        }
+
+        result = result + S * 30;
+
+        result = result + T * 20;
+
+        if(U % 4 != 0) {
+            result = result + U%4 * 40;
+        }
+        U = U/4;
+        result = result + U*3 * 40;
+
+        result = result + V/3 * 130;
+        V = V%3;
+        result = result + V/2 * 90;
+        V = V%2;
+        result = result + V * 50;
+
+        result = result + W * 20;
+
+        result = result + X * 90;
+
+        result = result + Y * 10;
+
+        result = result + Z * 50;
+
         return result;
     }
 }
+
