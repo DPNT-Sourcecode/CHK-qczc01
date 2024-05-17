@@ -143,21 +143,17 @@ public class CheckoutSolution {
 
         result = result + (S+T+X+Y+Z)/3 * 45;
 
-        
-
-        result = result + S * 30;
-
-        result = result + T * 20;
-
-        result = result + X * 90;
-
-        result = result + Y * 10;
-
-        result = result + Z * 50;
-
-
+        Integer nr = (S+T+X+Y+Z)%3;
+        if(nr!=0){
+            if(X>=nr){result = result + nr * 17;}
+            else if(Y>=nr){result = result + nr * 20;}
+            else if(S>=nr){result = result + nr * 20;}
+            else if(T>=nr){result = result + nr * 20;}
+            else {result = result + nr * 21;}
+        }
 
         return result;
     }
 }
+
 
