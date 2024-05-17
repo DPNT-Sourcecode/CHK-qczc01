@@ -18,6 +18,7 @@ public class CheckoutSolution {
             else if(skus.charAt(i) == 'C') {C++;}
             else if(skus.charAt(i) == 'D') {D++;}
             else if(skus.charAt(i) == 'E') {E++;}
+            else if(skus.charAt(i) == 'F') {F++;}
             else return -1;
         }
 
@@ -50,5 +51,6 @@ public class CheckoutSolution {
         return result;
     }
 }
+
 
 
