@@ -99,9 +99,9 @@ public class CheckoutSolution {
 
         result = result + J * 60;
 
-        result = result + K/2 * 150;
+        result = result + K/2 * 120;
         K = K%2;
-        result = result + K * 80;
+        result = result + K * 70;
 
         result = result + L * 90;
 
@@ -127,10 +127,6 @@ public class CheckoutSolution {
             result = result + Q * 30;
         }
 
-        result = result + S * 30;
-
-        result = result + T * 20;
-
         if(U % 4 != 0) {
             result = result + U%4 * 40;
         }
@@ -145,12 +141,23 @@ public class CheckoutSolution {
 
         result = result + W * 20;
 
+        result = result + (S+T+X+Y+Z)/3 * 45;
+
+        
+
+        result = result + S * 30;
+
+        result = result + T * 20;
+
         result = result + X * 90;
 
         result = result + Y * 10;
 
         result = result + Z * 50;
 
+
+
         return result;
     }
 }
+
