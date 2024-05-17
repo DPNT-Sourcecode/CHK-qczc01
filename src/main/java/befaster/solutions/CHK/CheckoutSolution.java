@@ -10,6 +10,7 @@ public class CheckoutSolution {
         Integer C = 0;
         Integer D = 0;
         Integer E = 0;
+        Integer F = 0;
 
         for(int i = 0; i < skus.length(); i++) {
             if(skus.charAt(i) == 'A') {A++;}
@@ -40,7 +41,14 @@ public class CheckoutSolution {
 
         result = result + D * 15;
 
+        if(F % 3 != 0) {
+            result = result + F%3 * 10;
+        }
+        F = F/3;
+        result = result + F*2 * 10;
+
         return result;
     }
 }
+
 
