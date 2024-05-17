@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        Integer result = -1;
+        Integer result = 0;
         Integer A = 0;
         Integer B = 0;
         Integer C = 0;
@@ -15,15 +15,17 @@ public class CheckoutSolution {
             else if(skus.charAt(i) == 'B') {B++;}
             else if(skus.charAt(i) == 'C') {C++;}
             else if(skus.charAt(i) == 'D') {D++;}
-            else return result;
+            else return -1;
         }
 
-        if(A>=3){
-            if(A%3 * )
-        }
+        result = result + A%3 * 50;
+        if(A>=3){result = result + A/3 * 130;}
+
+        result = result + B%3 * 50;
 
         return result;
     }
 }
+
 
 
