@@ -9,20 +9,32 @@ public class CheckoutSolution {
         Integer B = 0;
         Integer C = 0;
         Integer D = 0;
+        Integer E = 0;
 
         for(int i = 0; i < skus.length(); i++) {
             if(skus.charAt(i) == 'A') {A++;}
             else if(skus.charAt(i) == 'B') {B++;}
             else if(skus.charAt(i) == 'C') {C++;}
             else if(skus.charAt(i) == 'D') {D++;}
+            else if(skus.charAt(i) == 'E') {E++;}
             else return -1;
         }
 
-        result = result + A%3 * 50;
-        if(A>=3){result = result + A/3 * 130;}
+        result = result + A/5 * 200;
+        A = A % 5;
+        result = result + A/3 * 130;
+        A = A % 3;
+        result = result + A * 50;
 
-        result = result + B%2 * 30;
-        if(B>=2){result = result + B/2 * 45;}
+        result = result + E * 40;
+
+        B = B - E/2;
+
+        if(B>0) {
+            result = result + B / 2 * 45;
+            B = B % 2;
+            result = result + B * 30;
+        }
 
         result = result + C * 20;
 
@@ -31,3 +43,4 @@ public class CheckoutSolution {
         return result;
     }
 }
+
