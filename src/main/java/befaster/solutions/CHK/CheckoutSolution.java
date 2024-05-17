@@ -21,11 +21,17 @@ public class CheckoutSolution {
         result = result + A%3 * 50;
         if(A>=3){result = result + A/3 * 130;}
 
-        result = result + B%3 * 50;
+        result = result + B%2 * 30;
+        if(B>=2){result = result + B/2 * 45;}
+
+        result = result + C * 20;
+
+        result = result + D * 15;
 
         return result;
     }
 }
+
 
 
 
